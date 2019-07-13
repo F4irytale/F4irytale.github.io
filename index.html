@@ -366,6 +366,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/SQL笔记Part-3/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/13/SQL笔记Part-3/" class="post-title-link" itemprop="http://yoursite.com/index.html">SQL笔记Part.3</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-13 21:26:48 / 修改时间：21:27:21" itemprop="dateCreated datePublished" datetime="2019-07-13T21:26:48+08:00">2019-07-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="SQL的语法"><a href="#SQL的语法" class="headerlink" title="SQL的语法"></a>SQL的语法</h3><h6 id="本文为《SQL-必知必会》的学习笔记"><a href="#本文为《SQL-必知必会》的学习笔记" class="headerlink" title="本文为《SQL 必知必会》的学习笔记"></a>本文为《SQL 必知必会》的学习笔记</h6><blockquote>
+<p>第三章 排序检索数据</p>
+</blockquote>
+<ol>
+<li><p>使用ORDER BY子句对输出数据进行排序</p>
+<ul>
+<li>[1] 按字母顺序进行排序</li>
+<li>[2] 需要保证ORDER BY子句是SELECT语句中最后一条子句</li>
+<li>[3] 可以使用非检索列数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name</span><br><span class="line">FROM Products</span><br><span class="line">ORDER BY prod_name</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>按多个列排序<ul>
+<li>[1] 仅在具有相同的prod_price时才会对prod_name进行排序<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">ORDER BY prod_price,prod_name;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>按列位置排序</p>
+<ul>
+<li>[1] SELECT清单指定的是选择列的相对位置而不是列名ORDER BY 2表示按第二个列prod_name进行排序，ORDER BY 2,3表示先按prod_price，再按prod_name进行排序。</li>
+<li>[2] 优点：不用输入列名。缺点、；修改繁琐<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">ORDER BY 2,3</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>指定排序方向，默认升序(A~Z)，降序需指定DESC关键字</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">ORDER BY prod_price DESC;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li><p>多个列指定排序方向</p>
+<ul>
+<li>[1] DESC只用于指定前面的列名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">ORDER BY prod_price DESC,prod_price;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>DESC是DESCENDING的缩写，两个关键字都可以使用。与之相对的是ASC(或ASCENDING)，不指定则为升序</p>
+</li>
+<li>字母大小写排序由DBMS指定</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/AI使用笔记Part-1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1949,7 +2152,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
