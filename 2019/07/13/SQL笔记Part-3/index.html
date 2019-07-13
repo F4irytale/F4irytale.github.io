@@ -125,18 +125,18 @@
     enable_page_level_ads: true
   });
 </script>
-  <meta name="description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第三章 排序检索数据   使用ORDER BY子句对输出数据进行排序  [1] 按字母顺序进行排序 [2] 需要保证ORDER BY子句是SELECT语句中最后一条子句 [3] 可以使用非检索列数据123SELECT prod_nameFROM ProductsORDER BY prod_name    按多个列排序 [1] 仅在具有相同的prod">
+  <meta name="description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第三章 排序检索数据   使用ORDER BY子句对输出数据进行排序  [1] 按字母顺序进行排序 [2] 需要保证ORDER BY子句是SELECT语句中最后一条子句 [3] 可以使用非检索列数据123SELECT prod_nameFROM ProductsORDER BY prod_name    按多个列排序  [1] 仅在具有相同的pro">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL笔记Part.3">
 <meta property="og:url" content="http://yoursite.com/2019/07/13/SQL笔记Part-3/index.html">
 <meta property="og:site_name" content="Fairytale的知识屋">
-<meta property="og:description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第三章 排序检索数据   使用ORDER BY子句对输出数据进行排序  [1] 按字母顺序进行排序 [2] 需要保证ORDER BY子句是SELECT语句中最后一条子句 [3] 可以使用非检索列数据123SELECT prod_nameFROM ProductsORDER BY prod_name    按多个列排序 [1] 仅在具有相同的prod">
+<meta property="og:description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第三章 排序检索数据   使用ORDER BY子句对输出数据进行排序  [1] 按字母顺序进行排序 [2] 需要保证ORDER BY子句是SELECT语句中最后一条子句 [3] 可以使用非检索列数据123SELECT prod_nameFROM ProductsORDER BY prod_name    按多个列排序  [1] 仅在具有相同的pro">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-13T13:27:21.157Z">
+<meta property="og:updated_time" content="2019-07-13T13:30:36.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL笔记Part.3">
-<meta name="twitter:description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第三章 排序检索数据   使用ORDER BY子句对输出数据进行排序  [1] 按字母顺序进行排序 [2] 需要保证ORDER BY子句是SELECT语句中最后一条子句 [3] 可以使用非检索列数据123SELECT prod_nameFROM ProductsORDER BY prod_name    按多个列排序 [1] 仅在具有相同的prod">
+<meta name="twitter:description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第三章 排序检索数据   使用ORDER BY子句对输出数据进行排序  [1] 按字母顺序进行排序 [2] 需要保证ORDER BY子句是SELECT语句中最后一条子句 [3] 可以使用非检索列数据123SELECT prod_nameFROM ProductsORDER BY prod_name    按多个列排序  [1] 仅在具有相同的pro">
 
 
 
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-07-13 21:26:48 / 修改时间：21:27:21" itemprop="dateCreated datePublished" datetime="2019-07-13T21:26:48+08:00">2019-07-13</time>
+              <time title="创建时间：2019-07-13 21:26:48 / 修改时间：21:30:36" itemprop="dateCreated datePublished" datetime="2019-07-13T21:26:48+08:00">2019-07-13</time>
             
 
             
@@ -479,13 +479,12 @@
 <li>[3] 可以使用非检索列数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name</span><br><span class="line">FROM Products</span><br><span class="line">ORDER BY prod_name</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol start="2">
-<li>按多个列排序<ul>
+</li>
+<li><p>按多个列排序</p>
+<ul>
 <li>[1] 仅在具有相同的prod_price时才会对prod_name进行排序<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">ORDER BY prod_price,prod_name;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-</ol>
 </li>
 <li><p>按列位置排序</p>
 <ul>
