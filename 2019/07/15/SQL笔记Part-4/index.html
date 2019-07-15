@@ -125,20 +125,25 @@
     enable_page_level_ads: true
   });
 </script>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fairytale的知识屋">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第四章 过滤数据   使用WHERE子句进行条件过滤,WHERE子句在FROM子句之后给出，例句中只返回prod_price值为3.49的行  [1] 数据库中浮点数后0个数对于结果不受影响 [2] 尽量不要在应用层过滤数据，会造成不必要的浪费 [3] 同时使用ORDER BY和WHERE子句时，ORDER BY在WHERE子句之后123SELEC">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL笔记Part-4">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/SQL笔记Part-4/index.html">
 <meta property="og:site_name" content="Fairytale的知识屋">
+<meta property="og:description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第四章 过滤数据   使用WHERE子句进行条件过滤,WHERE子句在FROM子句之后给出，例句中只返回prod_price值为3.49的行  [1] 数据库中浮点数后0个数对于结果不受影响 [2] 尽量不要在应用层过滤数据，会造成不必要的浪费 [3] 同时使用ORDER BY和WHERE子句时，ORDER BY在WHERE子句之后123SELEC">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-15T13:03:30.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fairytale的知识屋">
+<meta name="twitter:title" content="SQL笔记Part-4">
+<meta name="twitter:description" content="SQL的语法本文为《SQL 必知必会》的学习笔记 第四章 过滤数据   使用WHERE子句进行条件过滤,WHERE子句在FROM子句之后给出，例句中只返回prod_price值为3.49的行  [1] 数据库中浮点数后0个数对于结果不受影响 [2] 尽量不要在应用层过滤数据，会造成不必要的浪费 [3] 同时使用ORDER BY和WHERE子句时，ORDER BY在WHERE子句之后123SELEC">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/15/SQL笔记Part-4/">
 
 
 
@@ -148,7 +153,7 @@
   };
 </script>
 
-  <title>Fairytale的知识屋</title>
+  <title>SQL笔记Part-4 | Fairytale的知识屋</title>
   
 
 
@@ -197,8 +202,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/FairytaIe"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
@@ -349,9 +353,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -366,7 +370,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/09/SQL笔记Part.1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/SQL笔记Part-4/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fairytale">
@@ -383,10 +387,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/09/SQL笔记Part.1/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">SQL笔记Part.1</a>
+          <h1 class="post-title" itemprop="name headline">SQL笔记Part-4
               
             
           </h1>
@@ -411,24 +412,12 @@
                 
               
 
-              <time title="创建时间：2019-07-09 21:59:21" itemprop="dateCreated datePublished" datetime="2019-07-09T21:59:21+08:00">2019-07-09</time>
+              <time title="创建时间：2019-07-15 21:02:28 / 修改时间：21:03:30" itemprop="dateCreated datePublished" datetime="2019-07-15T21:02:28+08:00">2019-07-15</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-11 15:29:33" itemprop="dateModified" datetime="2019-07-11T15:29:33+08:00">2019-07-11</time>
               
             
           </span>
@@ -479,228 +468,37 @@
       
 
       
-        
-          
-            <h3 id="SQL的语法"><a href="#SQL的语法" class="headerlink" title="SQL的语法"></a>SQL的语法</h3><h6 id="本文为《SQL-必知必会》的学习笔记"><a href="#本文为《SQL-必知必会》的学习笔记" class="headerlink" title="本文为《SQL 必知必会》的学习笔记"></a>本文为《SQL 必知必会》的学习笔记</h6><blockquote>
-<p>第一章 了解SQL</p>
-</blockquote>
-<ul>
-<li>数据库(database)：保存有组织的数据的容器数据库软件被称作数据库管理系统(DBMS)</li>
-<li>表(table)：特定类型数据的结构化清单:表名是唯一的，但是可以在不同数据库中使用相同表名</li>
-<li>模式：数据库与表的布局及特性信息</li>
-<li>列(column)：表中的字段，表由多个字段组成，每个列都有相应的数据类型</li>
-<li>行(row)：又称数据库记录(record)</li>
-<li>主键(primary key)：一列(或一组列)，能唯一标识表中的每一行</li>
-<li>主键满足条件<ul>
-<li>任意两行不具有相同的主键值</li>
-<li>每一行必须具有一个主键值(主键列不允许NULL值)</li>
-<li>主键列中的值不允许修改或更新</li>
-<li>主键值不能重用(如果某行从列表删除，他的主键不能赋给以后的新行)</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/09/Python-初学Part.1/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/09/Python-初学Part.1/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">Python初学Part.1</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-09 18:34:48" itemprop="dateCreated datePublished" datetime="2019-07-09T18:34:48+08:00">2019-07-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-11 15:30:18" itemprop="dateModified" datetime="2019-07-11T15:30:18+08:00">2019-07-11</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h3><h6 id="本文为《Python编程-从入门到实践》的学习笔记"><a href="#本文为《Python编程-从入门到实践》的学习笔记" class="headerlink" title="本文为《Python编程 从入门到实践》的学习笔记"></a>本文为《Python编程 从入门到实践》的学习笔记</h6><blockquote>
-<p>第一章 基础知识</p>
+        <h3 id="SQL的语法"><a href="#SQL的语法" class="headerlink" title="SQL的语法"></a>SQL的语法</h3><h6 id="本文为《SQL-必知必会》的学习笔记"><a href="#本文为《SQL-必知必会》的学习笔记" class="headerlink" title="本文为《SQL 必知必会》的学习笔记"></a>本文为《SQL 必知必会》的学习笔记</h6><blockquote>
+<p>第四章 过滤数据</p>
 </blockquote>
 <ol>
-<li>python2与python3格式上有区别，本书使用python3语法。</li>
-<li><p>第一个Hello World程序：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;Hello World&apos;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>变量只包含数字，字母，下划线。不能包含空格，可以使用下划线来分隔。不可以使用python关键字。</p>
-</li>
-<li>使用 ‘’ 或 “” 创建字符串。</li>
-<li>方法修改字符串大小写，首字母大写：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.title()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<li><p>使用WHERE子句进行条件过滤,WHERE子句在FROM子句之后给出，例句中只返回prod_price值为3.49的行</p>
 <ul>
-<li>全部大写与全部小写：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name.upper()</span><br><span class="line">name.lower()</span><br></pre></td></tr></table></figure>
+<li>[1] 数据库中浮点数后0个数对于结果不受影响</li>
+<li>[2] 尽量不要在应用层过滤数据，会造成不必要的浪费</li>
+<li>[3] 同时使用ORDER BY和WHERE子句时，ORDER BY在WHERE子句之后<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price = 3.49;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol start="6">
-<li>使用 + 来连接字符串。</li>
-<li>使用 \t 增加空格，使用 \n 换行。</li>
-<li>去除空格(暂时) 尾部空格 开头空白 两端空白。</li>
-<li>python2 中Hello World写法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print &quot;Hello World&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>WHERE子句操作符</p>
+<ul>
+<li>[1] 有些语句为冗余语句，需要确定DBMS支持哪些操作符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">= 等于                  &gt; 大于</span><br><span class="line">&lt;&gt; 不等于               &gt;= 大于等于</span><br><span class="line">!= 不等于               !&gt; 不大于</span><br><span class="line">&lt; 小于                  BETWEEN 在指定两个值之间</span><br><span class="line">&lt;= 小于等于             IS NULL 为NULL值</span><br><span class="line">!&lt; 不小于</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>检查单个值，不匹配检查，范围值检查，空值检查</p>
+<ul>
+<li>[1] 如果需要将值与字符串进行比较，需要使用引号进行限定</li>
+<li>[2] NULL(无值) 与0，空字符串，仅仅包含空格不同</li>
+<li>[3] NULL与非匹配不同<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price &lt;= 10;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_id &lt;&gt; &apos;DLL01&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price BETWEEN 5 AND 10;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price IS NULL;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
@@ -710,6 +508,13 @@
     
     
     <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
   
      </div>
 
@@ -724,182 +529,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/09/说在博客前/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/09/说在博客前/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">说在博客前</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-09 17:22:30" itemprop="dateCreated datePublished" datetime="2019-07-09T17:22:30+08:00">2019-07-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-11 15:32:16" itemprop="dateModified" datetime="2019-07-11T15:32:16+08:00">2019-07-11</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="这是一个老博客"><a href="#这是一个老博客" class="headerlink" title="这是一个老博客"></a>这是一个老博客</h1><p>他的主人已经半年多没有打理了</p>
-<blockquote>
-<p>暑假到了，他买了几本书</p>
-</blockquote>
-<p><code>他觉得自己还有时间经营这个网站</code></p>
-<p>就这样，他开始写笔记</p>
-<ol>
-<li>当然他也想赚钱</li>
-<li>只不过它不想把最宝贵的时间用在最廉价的工作上</li>
-<li>他心里仍然有个游戏梦</li>
-</ol>
-<p><a href="http://www.baidu.com" target="_blank" rel="noopener">学习秘籍</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/15/AI使用笔记Part-3/" rel="next" title="AI使用笔记Part.3">
+                <i class="fa fa-chevron-left"></i> AI使用笔记Part.3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -909,18 +568,20 @@
   </article>
 
 
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTQwOC8xNzk1NQ"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -941,8 +602,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1053,6 +723,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL的语法"><span class="nav-number">1.</span> <span class="nav-text">SQL的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#本文为《SQL-必知必会》的学习笔记"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">本文为《SQL 必知必会》的学习笔记</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1218,6 +904,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
 
   
 
@@ -1230,6 +920,20 @@
 
 
 
+  
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: '2019/07/15/SQL笔记Part-4/'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
