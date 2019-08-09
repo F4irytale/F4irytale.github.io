@@ -125,14 +125,18 @@
     enable_page_level_ads: true
   });
 </script>
-  <meta property="og:type" content="article">
+  <meta name="description" content="Mixin混合引用类选择器（另一个class/id）带参数混合123456.class&amp;#123;@color&amp;#125;&amp;#123;    color:@color;&amp;#125;#id&amp;#123;    .class(red);&amp;#125; 多个参数(@name,@name)设置默认值(@name:value)导引表达式123456789.classs(@font-size) when(2fon">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Less快速入门2">
 <meta property="og:url" content="http://yoursite.com/2019/08/09/Less快速入门2/index.html">
 <meta property="og:site_name" content="Fairytale的知识屋">
+<meta property="og:description" content="Mixin混合引用类选择器（另一个class/id）带参数混合123456.class&amp;#123;@color&amp;#125;&amp;#123;    color:@color;&amp;#125;#id&amp;#123;    .class(red);&amp;#125; 多个参数(@name,@name)设置默认值(@name:value)导引表达式123456789.classs(@font-size) when(2fon">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-09T03:52:27.356Z">
+<meta property="og:updated_time" content="2019-08-09T03:54:05.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Less快速入门2">
+<meta name="twitter:description" content="Mixin混合引用类选择器（另一个class/id）带参数混合123456.class&amp;#123;@color&amp;#125;&amp;#123;    color:@color;&amp;#125;#id&amp;#123;    .class(red);&amp;#125; 多个参数(@name,@name)设置默认值(@name:value)导引表达式123456789.classs(@font-size) when(2fon">
 
 
 
@@ -408,12 +412,34 @@
                 
               
 
-              <time title="创建时间：2019-08-09 11:52:27" itemprop="dateCreated datePublished" datetime="2019-08-09T11:52:27+08:00">2019-08-09</time>
+              <time title="创建时间：2019-08-09 11:52:27 / 修改时间：11:54:05" itemprop="dateCreated datePublished" datetime="2019-08-09T11:52:27+08:00">2019-08-09</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/less/" itemprop="url" rel="index"><span itemprop="name">less</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -442,7 +468,10 @@
       
 
       
-        
+        <h3 id="Mixin混合"><a href="#Mixin混合" class="headerlink" title="Mixin混合"></a>Mixin混合</h3><h5 id="引用类选择器（另一个class-id）"><a href="#引用类选择器（另一个class-id）" class="headerlink" title="引用类选择器（另一个class/id）"></a>引用类选择器（另一个class/id）</h5><h4 id="带参数混合"><a href="#带参数混合" class="headerlink" title="带参数混合"></a>带参数混合</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.class&#123;@color&#125;&#123;</span><br><span class="line">    color:@color;</span><br><span class="line">&#125;</span><br><span class="line">#id&#123;</span><br><span class="line">    .class(red);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="多个参数-name-name"><a href="#多个参数-name-name" class="headerlink" title="多个参数(@name,@name)"></a>多个参数(@name,@name)</h5><h5 id="设置默认值-name-value"><a href="#设置默认值-name-value" class="headerlink" title="设置默认值(@name:value)"></a>设置默认值(@name:value)</h5><h3 id="导引表达式"><a href="#导引表达式" class="headerlink" title="导引表达式"></a>导引表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.classs(@font-size) when(2font-size&lt;20)&#123;</span><br><span class="line">    font-size:unit(@font-size,px);</span><br><span class="line">&#125;</span><br><span class="line">.classs(@font-size) when(2font-size&gt;=20)&#123;</span><br><span class="line">    font-size:30px;</span><br><span class="line">&#125;</span><br><span class="line">.classs(@font-size)//总是匹配&#123;</span><br><span class="line">background-color:#ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@num1:20;</span><br><span class="line">@num2:@num1+10;</span><br><span class="line">@num3=@num1+@num2;</span><br><span class="line">@num4=(@num1+3)*2;</span><br><span class="line">@color:#666/2;</span><br><span class="line"></span><br><span class="line">border:unit(@num1/2,px)</span><br></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h5 id="单位函数unit-unit-5-px-增加-unit-5px-消去"><a href="#单位函数unit-unit-5-px-增加-unit-5px-消去" class="headerlink" title="单位函数unit unit(5,px)增加 unit(5px)消去"></a>单位函数unit unit(5,px)增加 unit(5px)消去</h5><h5 id="单位转换convert-单位类型一致，等值转换-convert-14mm-px"><a href="#单位转换convert-单位类型一致，等值转换-convert-14mm-px" class="headerlink" title="单位转换convert,单位类型一致，等值转换 convert(14mm,px)"></a>单位转换convert,单位类型一致，等值转换 convert(14mm,px)</h5><h5 id="颜色值转换-color-“blue”"><a href="#颜色值转换-color-“blue”" class="headerlink" title="颜色值转换 color(“blue”)"></a>颜色值转换 color(“blue”)</h5><h5 id="darken-color-10-、lighten-、mix-color-color-可选混合度"><a href="#darken-color-10-、lighten-、mix-color-color-可选混合度" class="headerlink" title="darken(color,10%)、lighten()、mix(color,color,可选混合度)"></a>darken(color,10%)、lighten()、mix(color,color,可选混合度)</h5>
       
     </div>
 
@@ -472,6 +501,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+        </div>
       
 
       
@@ -540,8 +575,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -660,6 +704,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mixin混合"><span class="nav-number">1.</span> <span class="nav-text">Mixin混合</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#引用类选择器（另一个class-id）"><span class="nav-number">1.0.1.</span> <span class="nav-text">引用类选择器（另一个class/id）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#带参数混合"><span class="nav-number">1.1.</span> <span class="nav-text">带参数混合</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#多个参数-name-name"><span class="nav-number">1.1.1.</span> <span class="nav-text">多个参数(@name,@name)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置默认值-name-value"><span class="nav-number">1.1.2.</span> <span class="nav-text">设置默认值(@name:value)</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#导引表达式"><span class="nav-number">2.</span> <span class="nav-text">导引表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算"><span class="nav-number">3.</span> <span class="nav-text">运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">4.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#单位函数unit-unit-5-px-增加-unit-5px-消去"><span class="nav-number">4.0.1.</span> <span class="nav-text">单位函数unit unit(5,px)增加 unit(5px)消去</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#单位转换convert-单位类型一致，等值转换-convert-14mm-px"><span class="nav-number">4.0.2.</span> <span class="nav-text">单位转换convert,单位类型一致，等值转换 convert(14mm,px)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#颜色值转换-color-“blue”"><span class="nav-number">4.0.3.</span> <span class="nav-text">颜色值转换 color(“blue”)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#darken-color-10-、lighten-、mix-color-color-可选混合度"><span class="nav-number">4.0.4.</span> <span class="nav-text">darken(color,10%)、lighten()、mix(color,color,可选混合度)</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
