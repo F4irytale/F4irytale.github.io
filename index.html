@@ -366,6 +366,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/Less快速入门3/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/10/Less快速入门3/" class="post-title-link" itemprop="http://yoursite.com/index.html">Less快速入门3</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-10 10:48:20 / 修改时间：10:48:53" itemprop="dateCreated datePublished" datetime="2019-08-10T10:48:20+08:00">2019-08-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/less/" itemprop="url" rel="index"><span itemprop="name">less</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h5 id="data-uri-统一资源标识符，不超过32k"><a href="#data-uri-统一资源标识符，不超过32k" class="headerlink" title="data-uri()统一资源标识符，不超过32k"></a>data-uri()统一资源标识符，不超过32k</h5><h5 id="when-default-自定义的默认值"><a href="#when-default-自定义的默认值" class="headerlink" title="when(default()){}自定义的默认值"></a>when(default()){}自定义的默认值</h5><h5 id="取反not"><a href="#取反not" class="headerlink" title="取反not()"></a>取反not()</h5><h5 id="替换replace-‘string’-’old’-’new’-g-全局替换-replace-‘string’-’正则reg’-’-1’-g-1占位符，第一个匹配的值"><a href="#替换replace-‘string’-’old’-’new’-g-全局替换-replace-‘string’-’正则reg’-’-1’-g-1占位符，第一个匹配的值" class="headerlink" title="替换replace(‘string’,’old’,’new’,g)全局替换 replace(‘string’,’正则reg’,’$1’,g) $1占位符，第一个匹配的值"></a>替换replace(‘string’,’old’,’new’,g)全局替换 replace(‘string’,’正则reg’,’$1’,g) $1占位符，第一个匹配的值</h5><h5 id="长度length-获取值的数量，空格逗号分隔，返回个数"><a href="#长度length-获取值的数量，空格逗号分隔，返回个数" class="headerlink" title="长度length()获取值的数量，空格逗号分隔，返回个数"></a>长度length()获取值的数量，空格逗号分隔，返回个数</h5><h5 id="提取函数取值extract-name-3"><a href="#提取函数取值extract-name-3" class="headerlink" title="提取函数取值extract(@name,3)"></a>提取函数取值extract(@name,3)</h5><h3 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ceil向上取整</span><br><span class="line">round四舍五入</span><br><span class="line">percentage转换百分比</span><br><span class="line">mod余数</span><br></pre></td></tr></table></figure>
+<h3 id="嵌套规则"><a href="#嵌套规则" class="headerlink" title="嵌套规则"></a>嵌套规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#id&#123;</span><br><span class="line">    .name&#123;&#125;</span><br><span class="line">    .name&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="继承-extend"><a href="#继承-extend" class="headerlink" title="继承:extend"></a>继承:extend</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.class&#123;</span><br><span class="line">    &amp;:extend(.class)</span><br><span class="line">&#125;</span><br><span class="line">.class:extend(.class)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="继承多个逗号隔开"><a href="#继承多个逗号隔开" class="headerlink" title="继承多个逗号隔开"></a>继承多个逗号隔开</h5><h5 id="extend-class-all-只要包含class的选择器都继承"><a href="#extend-class-all-只要包含class的选择器都继承" class="headerlink" title=":extend(.class all)只要包含class的选择器都继承"></a>:extend(.class all)只要包含class的选择器都继承</h5><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;name.less&quot;</span><br><span class="line">@import &quot;name.css&quot;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/09/Less快速入门2/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1821,205 +1987,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/SQL笔记Part-5/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/17/SQL笔记Part-5/" class="post-title-link" itemprop="http://yoursite.com/index.html">SQL笔记Part.5</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-17 21:58:50 / 修改时间：22:00:29" itemprop="dateCreated datePublished" datetime="2019-07-17T21:58:50+08:00">2019-07-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="SQL的语法"><a href="#SQL的语法" class="headerlink" title="SQL的语法"></a>SQL的语法</h3><h6 id="本文为《SQL-必知必会》的学习笔记"><a href="#本文为《SQL-必知必会》的学习笔记" class="headerlink" title="本文为《SQL 必知必会》的学习笔记"></a>本文为《SQL 必知必会》的学习笔记</h6><blockquote>
-<p>第五章 高级数据过滤</p>
-</blockquote>
-<ol>
-<li>使用操作符AND和OR组成的字句进行数据过滤<ul>
-<li>[1] AND 表示满足所有指定条件，多个条件需关键字连接</li>
-<li>[2] 省略ORDER BY子句，应放在WHERE后</li>
-<li>[3] OR 匹配任一条件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE vend_id = &apos;DLL01&apos; AND prod_price &lt;= 4</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE vend_id = &apos;DLL01&apos; OR vend_id = &apos;BRS01&apos;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><p>组合AND和OR操作符建立一个WHERE子句</p>
-<ul>
-<li>[1] AND操作符优先级高于OR，需用括号进行分组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE (vend_id = &apos;DLL01&apos; OR vend_id = &apos;BRS01&apos;) AND prod_price &lt;= 4</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>条件范围关键字IN，作用与OR基本相同，相较于OR，有几个有点</p>
-<ul>
-<li>[1] IN更直观，更清楚</li>
-<li>[2] 求职顺序更容易管理</li>
-<li>[3] 操作执行更快</li>
-<li>[4] 可包含其它SELECT语句，建立动态WHERE子句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE vend_id IN (&apos;DLL01&apos;,&apos;BRS01&apos;)</span><br><span class="line">ORDER BY prod_name</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>NOT否定其后所有条件，从不单独使用</p>
-<ul>
-<li>[1] 也可以使用&lt;&gt;操作符完成<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE NOT vend_id = &apos;DLL01&apos;</span><br><span class="line">ORDER BY prod_name</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE vend_id &lt;&gt; &apos;DLL01&apos;</span><br><span class="line">ORDER BY prod_name</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2067,7 +2034,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
