@@ -366,6 +366,330 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/jQuery笔记第二部分/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/31/jQuery笔记第二部分/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">jQuery笔记第二部分</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-31 23:52:40 / 修改时间：23:53:12" itemprop="dateCreated datePublished" datetime="2019-07-31T23:52:40+08:00">2019-07-31</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/jQuery/" itemprop="url" rel="index"><span itemprop="name">jQuery</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="过滤选择器"><a href="#过滤选择器" class="headerlink" title="过滤选择器"></a>过滤选择器</h3><h5 id="span-eq-1-索引为1的span-gt大于-lt小于"><a href="#span-eq-1-索引为1的span-gt大于-lt小于" class="headerlink" title="$(span:eq(1))索引为1的span :gt大于 :lt小于"></a>$(span:eq(1))索引为1的span :gt大于 :lt小于</h5><h5 id="header所有标题"><a href="#header所有标题" class="headerlink" title=":header所有标题"></a>:header所有标题</h5><h3 id="内容过滤选择器"><a href="#内容过滤选择器" class="headerlink" title="内容过滤选择器"></a>内容过滤选择器</h3><h5 id="div-contains-text-empty-空元素-has-选择器-包含选择器的元素的元素-parent非空元素"><a href="#div-contains-text-empty-空元素-has-选择器-包含选择器的元素的元素-parent非空元素" class="headerlink" title="$(div :contains(text)) :empty 空元素 :has(选择器)包含选择器的元素的元素 :parent非空元素"></a>$(div :contains(text)) :empty 空元素 :has(选择器)包含选择器的元素的元素 :parent非空元素</h5><h3 id="属性过滤选择器"><a href="#属性过滤选择器" class="headerlink" title="属性过滤选择器"></a>属性过滤选择器</h3><h5 id="value-包含value属性-value-name-value-name-id-value-value开头-id-value-value结尾-id-value-包含value"><a href="#value-包含value属性-value-name-value-name-id-value-value开头-id-value-value结尾-id-value-包含value" class="headerlink" title="[value]包含value属性 value=name value!=name [id^=value]value开头 [id$=value]value结尾 [id*=value]包含value"></a>[value]包含value属性 value=name value!=name [id^=value]value开头 [id$=value]value结尾 [id*=value]包含value</h5><h3 id="子元素过滤选择器"><a href="#子元素过滤选择器" class="headerlink" title="子元素过滤选择器"></a>子元素过滤选择器</h3><h5 id="div-nth-child父元素下的子元素-div-a-first-child每一个的第一个a-last-child最后一个-nth-child-1-第一个-nth-child-even-odd-only-child只有一个子元素"><a href="#div-nth-child父元素下的子元素-div-a-first-child每一个的第一个a-last-child最后一个-nth-child-1-第一个-nth-child-even-odd-only-child只有一个子元素" class="headerlink" title="div:nth-child父元素下的子元素 div a:first-child每一个的第一个a last-child最后一个 :nth-child(1)第一个 :nth-child(even/odd) only-child只有一个子元素"></a>div:nth-child父元素下的子元素 div a:first-child每一个的第一个a last-child最后一个 :nth-child(1)第一个 :nth-child(even/odd) only-child只有一个子元素</h5><h3 id="可见性过滤选择器"><a href="#可见性过滤选择器" class="headerlink" title="可见性过滤选择器"></a>可见性过滤选择器</h3><h5 id="visible可见元素-hidden隐藏元素-取不到visiblity-hidden"><a href="#visible可见元素-hidden隐藏元素-取不到visiblity-hidden" class="headerlink" title=":visible可见元素 :hidden隐藏元素(取不到visiblity:hidden)"></a>:visible可见元素 :hidden隐藏元素(取不到visiblity:hidden)</h5><h3 id="表单选择器"><a href="#表单选择器" class="headerlink" title="表单选择器"></a>表单选择器</h3><h5 id="input取表单中所有input-text单行文本框-password-radio"><a href="#input取表单中所有input-text单行文本框-password-radio" class="headerlink" title=":input取表单中所有input :text单行文本框 :password :radio"></a>:input取表单中所有input :text单行文本框 :password :radio</h5><h5 id="each-radio-function-index-item-item-value-遍历循环"><a href="#each-radio-function-index-item-item-value-遍历循环" class="headerlink" title="$.each(radio,function(index,item){$(item).value})遍历循环"></a>$.each(radio,function(index,item){$(item).value})遍历循环</h5><h5 id="button所有按钮-enable可用-checked被选中的-selected选中的列表选中的选项"><a href="#button所有按钮-enable可用-checked被选中的-selected选中的列表选中的选项" class="headerlink" title=":button所有按钮 :enable可用 :checked被选中的 :selected选中的列表选中的选项"></a>:button所有按钮 :enable可用 :checked被选中的 :selected选中的列表选中的选项</h5>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/30/jQuery笔记第一部分/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/30/jQuery笔记第一部分/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">jQuery笔记第一部分</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-30 23:16:30 / 修改时间：23:18:41" itemprop="dateCreated datePublished" datetime="2019-07-30T23:16:30+08:00">2019-07-30</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/jQuery/" itemprop="url" rel="index"><span itemprop="name">jQuery</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="看了眼之前的笔记，发现一个误区，我写成了教程，这次我尝试更精简的总结"><a href="#看了眼之前的笔记，发现一个误区，我写成了教程，这次我尝试更精简的总结" class="headerlink" title="看了眼之前的笔记，发现一个误区，我写成了教程，这次我尝试更精简的总结"></a>看了眼之前的笔记，发现一个误区，我写成了教程，这次我尝试更精简的总结</h1><h2 id="jQuery入门"><a href="#jQuery入门" class="headerlink" title="jQuery入门"></a>jQuery入门</h2><h5 id="选择器-是一个数组"><a href="#选择器-是一个数组" class="headerlink" title="$(选择器)是一个数组"></a>$(选择器)是一个数组</h5><h5 id="ready-方法表示文档就绪，类似于onload，-document-ready-可以简写成-，一个页面可以同时拥有多个"><a href="#ready-方法表示文档就绪，类似于onload，-document-ready-可以简写成-，一个页面可以同时拥有多个" class="headerlink" title="ready()方法表示文档就绪，类似于onload，$(document.ready())可以简写成$()，一个页面可以同时拥有多个"></a>ready()方法表示文档就绪，类似于onload，$(document.ready())可以简写成$()，一个页面可以同时拥有多个</h5><h5 id="css-方法"><a href="#css-方法" class="headerlink" title="css()方法"></a>css()方法</h5><h5 id="换名字-var-name-jQuery-noConflict"><a href="#换名字-var-name-jQuery-noConflict" class="headerlink" title="换名字 var name = jQuery.noConflict()"></a>换名字 var name = jQuery.noConflict()</h5><h5 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery = $"></a>jQuery = $</h5><h5 id="dom-value-jQuery-val"><a href="#dom-value-jQuery-val" class="headerlink" title="dom.value = jQuery.val()"></a>dom.value = jQuery.val()</h5><h5 id="dom-innerhtml-jQuery-html"><a href="#dom-innerhtml-jQuery-html" class="headerlink" title="dom.innerhtml = jQuery.html()"></a>dom.innerhtml = jQuery.html()</h5><h5 id="jq对象是数组"><a href="#jq对象是数组" class="headerlink" title="jq对象是数组"></a>jq对象是数组</h5><h5 id="jq隐式遍历"><a href="#jq隐式遍历" class="headerlink" title="jq隐式遍历"></a>jq隐式遍历</h5><h5 id="jq-get-index"><a href="#jq-get-index" class="headerlink" title="jq.get(index)"></a>jq.get(index)</h5><h5 id="设置与读取同一个方法-html-‘’"><a href="#设置与读取同一个方法-html-‘’" class="headerlink" title="设置与读取同一个方法.html(‘’)"></a>设置与读取同一个方法.html(‘’)</h5><h5 id="样式-css-‘color’-’red’"><a href="#样式-css-‘color’-’red’" class="headerlink" title="样式.css(‘color’,’red’)"></a>样式.css(‘color’,’red’)</h5><h5 id="设置value-val-‘’"><a href="#设置value-val-‘’" class="headerlink" title="设置value .val(‘’)"></a>设置value .val(‘’)</h5><h5 id="宽高可以使用css，也可以-width-‘’-height-‘’"><a href="#宽高可以使用css，也可以-width-‘’-height-‘’" class="headerlink" title="宽高可以使用css，也可以.width(‘’).height(‘’)"></a>宽高可以使用css，也可以.width(‘’).height(‘’)</h5><h5 id="连用方法-html-‘’-css-‘’"><a href="#连用方法-html-‘’-css-‘’" class="headerlink" title="连用方法 .html(‘’).css(‘’)"></a>连用方法 .html(‘’).css(‘’)</h5><h5 id="css-‘’-’’-’’-’’-json对象"><a href="#css-‘’-’’-’’-’’-json对象" class="headerlink" title=".css({‘’:’’,’’:’’}) json对象"></a>.css({‘’:’’,’’:’’}) json对象</h5><h4 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h4><h5 id="id-class-id-class-a-b"><a href="#id-class-id-class-a-b" class="headerlink" title="$(#id),$(.class),$(#id,.class),$(a.b),$(*)"></a>$(#id),$(.class),$(#id,.class),$(a.b),$(*)</h5><h4 id="层次选择器"><a href="#层次选择器" class="headerlink" title="层次选择器"></a>层次选择器</h4><h5 id="div-first-div-div-first-gt-div-div-first-div-相邻-div-first-div-后全部"><a href="#div-first-div-div-first-gt-div-div-first-div-相邻-div-first-div-后全部" class="headerlink" title="$(div#first div) $(div#first &gt; div) $(div#first + div)相邻 $(div#first ~ div)后全部"></a>$(div#first div) $(div#first &gt; div) $(div#first + div)相邻 $(div#first ~ div)后全部</h5><h4 id="过滤选择器"><a href="#过滤选择器" class="headerlink" title="过滤选择器"></a>过滤选择器</h4><h5 id="span-first-第一个span-last-not-class-even偶数-odd奇数"><a href="#span-first-第一个span-last-not-class-even偶数-odd奇数" class="headerlink" title="$(span:first)第一个span :last :not(.class) :even偶数 :odd奇数"></a>$(span:first)第一个span :last :not(.class) :even偶数 :odd奇数</h5><h2 id="css进阶"><a href="#css进阶" class="headerlink" title="css进阶"></a>css进阶</h2><h5 id="透明-opacity-value-0-1-继承-，影响字体颜色"><a href="#透明-opacity-value-0-1-继承-，影响字体颜色" class="headerlink" title="透明 opacity:value(0-1|继承)，影响字体颜色"></a>透明 opacity:value(0-1|继承)，影响字体颜色</h5><h5 id="rgba-a-0-1-，不影响字体颜色"><a href="#rgba-a-0-1-，不影响字体颜色" class="headerlink" title="rgba a(0-1)，不影响字体颜色"></a>rgba a(0-1)，不影响字体颜色</h5>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/SQL笔记Part-5/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1911,432 +2235,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/11/SQL笔记Part-2/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/11/SQL笔记Part-2/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">SQL笔记Part.2</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-11 15:19:54 / 修改时间：15:24:42" itemprop="dateCreated datePublished" datetime="2019-07-11T15:19:54+08:00">2019-07-11</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="SQL的语法"><a href="#SQL的语法" class="headerlink" title="SQL的语法"></a>SQL的语法</h3><h6 id="本文为《SQL-必知必会》的学习笔记"><a href="#本文为《SQL-必知必会》的学习笔记" class="headerlink" title="本文为《SQL 必知必会》的学习笔记"></a>本文为《SQL 必知必会》的学习笔记</h6><blockquote>
-<p>第二章 检索数据</p>
-</blockquote>
-<ol>
-<li>关键字：SQL组成部分的保留字，不可用用作表或列的名字</li>
-<li><p>检索单个列</p>
-<ul>
-<li>[1] 返回未排列的数据</li>
-<li>[2] 多条SQL语句必须使用 ; 分隔</li>
-<li>[3] SQL语句不区分大小写，大写更易阅读</li>
-<li>[4] SQL语句忽略空格与换行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name</span><br><span class="line">FROM Products;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>检索多个列</p>
-<ul>
-<li>[1] 多个列名中加上逗号，最后一个列名后不需要</li>
-<li>[2] 数据显示正确格式需要在使用数据的应用中规定<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id,prod_name,prod_price</span><br><span class="line">FROM Products;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>检索所有列</p>
-<ul>
-<li>[1] 使用通配符 * 会降低和应用程序的性能</li>
-<li>[2] 可以使用通配符检测未知列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM Products;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>检索不同值</p>
-<ul>
-<li>[1] 使用DISTINCT关键字去重</li>
-<li>[2] DISTINCT关键字作用于指定的所有列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT vend_id</span><br><span class="line">FROM Products;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>限制结果</p>
-<ul>
-<li>[1] 在 SQLserver与Access使用TOP关键字限制返回多少行</li>
-<li>[2] 在DB2中需要结尾增加特定语句</li>
-<li>[3] 使用Oracle需要使用ROWNUM(行计数器)</li>
-<li>[4] MySQL、MariaDB、PostgreSQL或者SQLite,使用LIMIT子句，同时可以使用OFFSET指定起始行数<ul>
-<li>[1] 起始行数是0行</li>
-<li>[2] MySQL、MariaDB和SQLite支持简化LIMIT子句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FETCH FIRST 5 ROWS ONLY；</span><br><span class="line">WHERE ROWNUM &lt;= 5;</span><br><span class="line">LIMIT 5;    LIMIT 4 OFFSET 3;</span><br><span class="line">*简化 LIMIT 3,4</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>注释</p>
-<ul>
-<li>[1] 单行注释</li>
-<li>[2] 单行注释(支持少)</li>
-<li>[3] 多行注释<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--</span><br><span class="line">#</span><br><span class="line">/* */</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/10/python-初学Part.3/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/10/python-初学Part.3/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">python初学Part.3</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-10 23:12:05" itemprop="dateCreated datePublished" datetime="2019-07-10T23:12:05+08:00">2019-07-10</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-11 15:30:17" itemprop="dateModified" datetime="2019-07-11T15:30:17+08:00">2019-07-11</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h3><h6 id="本文为《Python编程-从入门到实践》的学习笔记"><a href="#本文为《Python编程-从入门到实践》的学习笔记" class="headerlink" title="本文为《Python编程 从入门到实践》的学习笔记"></a>本文为《Python编程 从入门到实践》的学习笔记</h6><blockquote>
-<p>第三章 列表简介(1)</p>
-</blockquote>
-<ol>
-<li><p>python里使用 [] 来表示列表,打印时连同方括号一起：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [&apos;trek&apos;,&apos;cannondale&apos;,&apos;redline&apos;,&apos;specialized&apos;]</span><br><span class="line">&gt;&gt;&gt; [&apos;trek&apos;,&apos;cannondale&apos;,&apos;redline&apos;,&apos;specialized&apos;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>访问列表元素使用列表索引,索引从0开始,同时可以使用方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(bicycles[0].title())</span><br><span class="line">&gt;&gt;&gt; Trek</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将索引指定为-1，可让python选择最后一个列表元素,-2为倒数第二个元素，以此类推</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(bicycles[-1])</span><br><span class="line">&gt;&gt;&gt; specialized</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改元素列表：指定元素索引，再指定新值</p>
-</li>
-<li><p>添加元素：使用方法append()，把元素添加到末尾，从而可以通过声明空列表来创建动态列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles.append(&apos;giant&apos;)</span><br><span class="line">&gt;&gt;&gt; [&apos;trek&apos;,&apos;cannondale&apos;,&apos;redline&apos;,&apos;specialized&apos;,&apos;giant&apos;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>插入元素：使用insert()方法，需要指定新元素的索引和值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles.insert(0,&apos;ducati&apos;)</span><br><span class="line">&gt;&gt;&gt; [&apos;ducati&apos;,&apos;trek&apos;,&apos;cannondale&apos;,&apos;redline&apos;,&apos;specialized&apos;,&apos;giant&apos;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>列表删除元素：使用del语句删除，需要知道元素在列表的位置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del bicycles[0]</span><br><span class="line">&gt;&gt;&gt; [&apos;trek&apos;,&apos;cannondale&apos;,&apos;redline&apos;,&apos;specialized&apos;,&apos;giant&apos;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用pop()方法弹出列表中元素，默认弹出最尾部元素，你可以将元素保存到另外一个变量中。也可以弹出任何位置中的元素，需要在括号中指定删除元素的索引</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycle = bicycles.pop(0)</span><br><span class="line">&gt;&gt;&gt; trek</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>根据值删除元素，使用remove()方法，里面的值可以为列表元素，也可以为变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles.remove(&apos;trek&apos;)</span><br><span class="line">&gt;&gt;&gt; [cannondale&apos;,&apos;redline&apos;,&apos;specialized&apos;,&apos;giant&apos;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>以上代码需加练习</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2384,7 +2282,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2411,7 +2309,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
