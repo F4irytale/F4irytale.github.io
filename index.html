@@ -366,6 +366,186 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/Canvas-倒计时/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/12/Canvas-倒计时/" class="post-title-link" itemprop="http://yoursite.com/index.html">Canvas-倒计时</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-12 18:17:40 / 修改时间：18:18:39" itemprop="dateCreated datePublished" datetime="2019-08-12T18:17:40+08:00">2019-08-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Canvas/" itemprop="url" rel="index"><span itemprop="name">Canvas</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><a href="https://www.imooc.com/learn/133" target="_blank" rel="noopener">慕课网 Canvas</a><h5 id="插入标签"><a href="#插入标签" class="headerlink" title="插入标签"></a>插入标签</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var canvas=document.getElementById(&apos;canvas&apos;);</span><br><span class="line"></span><br><span class="line">var context=canvas.getContext(&apos;2d&apos;);</span><br></pre></td></tr></table></figure>
+<h5 id="状态与绘制"><a href="#状态与绘制" class="headerlink" title="状态与绘制"></a>状态与绘制</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">context.moveTo(100,100)//直线的起点</span><br><span class="line">context.lineTo(700,700)/</span><br><span class="line"></span><br><span class="line">context.stroke()绘制</span><br></pre></td></tr></table></figure>
+<h5 id="lineWidth-粗细-strokeStyle-颜色"><a href="#lineWidth-粗细-strokeStyle-颜色" class="headerlink" title="lineWidth 粗细  strokeStyle 颜色"></a>lineWidth 粗细  strokeStyle 颜色</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.fillStyle=&quot;rgb()&quot;填充色</span><br><span class="line">context.fill()填充绘制</span><br></pre></td></tr></table></figure>
+<h5 id="绘图开关"><a href="#绘图开关" class="headerlink" title="绘图开关"></a>绘图开关</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.beginPath()</span><br><span class="line">context.closePath()</span><br></pre></td></tr></table></figure>
+<h5 id="弧线"><a href="#弧线" class="headerlink" title="弧线"></a>弧线</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">context.arc(</span><br><span class="line">        centexr,centery,radius,//圆心，半径</span><br><span class="line">        startingAngle,endingAngle,//起始位置，结束位置 2*Math.PI</span><br><span class="line">        anticlockwise=false //默认顺时针</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h5 id="closePath-自动线段封闭路径"><a href="#closePath-自动线段封闭路径" class="headerlink" title="closePath() 自动线段封闭路径"></a>closePath() 自动线段封闭路径</h5><h5 id="fill-自动封闭填充"><a href="#fill-自动封闭填充" class="headerlink" title="fill()自动封闭填充"></a>fill()自动封闭填充</h5><h5 id="声明数组二维点阵"><a href="#声明数组二维点阵" class="headerlink" title="声明数组二维点阵"></a>声明数组二维点阵</h5><h5 id="二维循环画点阵"><a href="#二维循环画点阵" class="headerlink" title="二维循环画点阵"></a>二维循环画点阵</h5><h5 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const endTime = new Date(2018,6,11,18,47,52)//声明截止时间</span><br></pre></td></tr></table></figure>
+<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">setlnterval(</span><br><span class="line">function()&#123;</span><br><span class="line">    render();</span><br><span class="line">    update();</span><br><span class="line">&#125;,</span><br><span class="line">50</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h5 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">context.clearRect(0,0,0,0)</span><br></pre></td></tr></table></figure>
+<h5 id="小球掉落"><a href="#小球掉落" class="headerlink" title="小球掉落"></a>小球掉落</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ball=&#123;</span><br><span class="line"> x:512//小球中心点的水平位置</span><br><span class="line"> y:100//小球中心点的垂直位置</span><br><span class="line"> r:20//小球半径</span><br><span class="line"> g:2// 运动加速度</span><br><span class="line"> vx:-4//小球运动的水平速度</span><br><span class="line">&#125;</span><br><span class="line">function update()&#123;</span><br><span class="line">		//下落</span><br><span class="line">		ball.x += ball.vx;//x = vx*t</span><br><span class="line">        ball.y += ball.vy;//y = vy*t</span><br><span class="line">        ball.vy += ball.g;//vy = g*t</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="碰撞检测，位置超过屏幕边缘"><a href="#碰撞检测，位置超过屏幕边缘" class="headerlink" title="碰撞检测，位置超过屏幕边缘"></a>碰撞检测，位置超过屏幕边缘</h5><h5 id="生成小球，更新当前时间，对二维数组进行循环，-1增加小球"><a href="#生成小球，更新当前时间，对二维数组进行循环，-1增加小球" class="headerlink" title="生成小球，更新当前时间，对二维数组进行循环，=1增加小球"></a>生成小球，更新当前时间，对二维数组进行循环，=1增加小球</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Math.ceil()向上取整</span><br><span class="line">Math.floor()向下取整</span><br><span class="line">Math.round()四舍五入取整</span><br></pre></td></tr></table></figure>
+<h5 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//删除已出屏幕的小球</span><br><span class="line">var cnt = 0</span><br><span class="line">for( var i = 0 ; i &lt; balls.length ; i ++ )</span><br><span class="line">	 if( balls[i].x + RADIUS &gt; 0 &amp;&amp; balls[i].x -RADIUS &lt; WINDOW_WIDTH )</span><br><span class="line">	  balls[cnt++] = balls[i]</span><br><span class="line">	  </span><br><span class="line">while(balls.length&gt; Math.min(300,cnt)) &#123;</span><br><span class="line">      balls.pop(); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="自适应"><a href="#自适应" class="headerlink" title="自适应"></a>自适应</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">document.body.clientWidth ==&gt; BODY对象宽度</span><br><span class="line">document.body.clientHeight ==&gt; BODY对象高度</span><br><span class="line">document.documentElement.clientWidth ==&gt; 可见区域宽度</span><br><span class="line">document.documentElement.clientHeight ==&gt; 可见区域高度</span><br></pre></td></tr></table></figure>
+<h5 id="固定倒计时"><a href="#固定倒计时" class="headerlink" title="固定倒计时"></a>固定倒计时</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var endTime = new Date();</span><br><span class="line">endTime.setTime(endTime.getTime + 3600*1000)</span><br></pre></td></tr></table></figure>
+<h5 id="成为时钟"><a href="#成为时钟" class="headerlink" title="成为时钟"></a>成为时钟</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var curTime = new Date()</span><br><span class="line">curTime.getHours()*3600 + curTime.getMinutes()*60 + curTime.getSecond()</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/11/教程指引/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1830,168 +2010,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/04/Bootstrap笔记1/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/04/Bootstrap笔记1/" class="post-title-link" itemprop="http://yoursite.com/index.html">Bootstrap笔记1</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-04 16:35:13 / 修改时间：16:36:25" itemprop="dateCreated datePublished" datetime="2019-08-04T16:35:13+08:00">2019-08-04</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Bootstrap/" itemprop="url" rel="index"><span itemprop="name">Bootstrap</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="栅格参数"><a href="#栅格参数" class="headerlink" title="栅格参数"></a>栅格参数</h3><h5 id="container-container-fluid"><a href="#container-container-fluid" class="headerlink" title=".container .container-fluid"></a>.container .container-fluid</h5><h5 id="一行最多12列-超小屏幕col-xs-列数-sm-md-lg-默认大继承小-超出换行"><a href="#一行最多12列-超小屏幕col-xs-列数-sm-md-lg-默认大继承小-超出换行" class="headerlink" title="一行最多12列 超小屏幕col-xs-列数 -sm- -md- -lg- 默认大继承小 超出换行"></a>一行最多12列 超小屏幕col-xs-列数 -sm- -md- -lg- 默认大继承小 超出换行</h5><h3 id="列偏移排序嵌套"><a href="#列偏移排序嵌套" class="headerlink" title="列偏移排序嵌套"></a>列偏移排序嵌套</h3><h5 id="col-md-offset-2-只能向右偏移"><a href="#col-md-offset-2-只能向右偏移" class="headerlink" title="col-md-offset-2 只能向右偏移"></a>col-md-offset-2 只能向右偏移</h5><h5 id="pull-左移覆盖-push-向右"><a href="#pull-左移覆盖-push-向右" class="headerlink" title="-pull- 左移覆盖 -push-向右"></a>-pull- 左移覆盖 -push-向右</h5><h3 id="排版全局样式"><a href="#排版全局样式" class="headerlink" title="排版全局样式"></a>排版全局样式</h3><h5 id="small-小标题-h1-h6-lead-mark"><a href="#small-小标题-h1-h6-lead-mark" class="headerlink" title=".small 小标题 .h1~.h6 .lead .mark"></a>.small 小标题 .h1~.h6 .lead .mark</h5><h5 id="text-right-left-center-justify对齐-text-nowrap超出不换行-lt-abbr-attribute-gt"><a href="#text-right-left-center-justify对齐-text-nowrap超出不换行-lt-abbr-attribute-gt" class="headerlink" title="text-right/left/center/justify对齐 text-nowrap超出不换行 &lt; abbr attribute&gt;"></a>text-right/left/center/justify对齐 text-nowrap超出不换行 &lt; abbr attribute&gt;</h5><h5 id="lt-blockquote-gt-lt-footer-gt-lt-footer-gt-lt-blockquote-gt-blockquote-reverse反向"><a href="#lt-blockquote-gt-lt-footer-gt-lt-footer-gt-lt-blockquote-gt-blockquote-reverse反向" class="headerlink" title="&lt; blockquote&gt; &lt; footer&gt; &lt; /footer&gt;&lt; /blockquote&gt; blockquote-reverse反向"></a>&lt; blockquote&gt; &lt; footer&gt; &lt; /footer&gt;&lt; /blockquote&gt; blockquote-reverse反向</h5><h5 id="list-unstyled-list-inline"><a href="#list-unstyled-list-inline" class="headerlink" title="list-unstyled list-inline"></a>list-unstyled list-inline</h5><h3 id="内联"><a href="#内联" class="headerlink" title="内联"></a>内联</h3><h5 id="lt-code-gt-lt-gt"><a href="#lt-code-gt-lt-gt" class="headerlink" title="&lt; code&gt; &lt; &gt;"></a>&lt; code&gt; &lt; &gt;</h5><h5 id="lt-kbd-gt"><a href="#lt-kbd-gt" class="headerlink" title="&lt; kbd&gt;"></a>&lt; kbd&gt;</h5><h5 id="lt-pre-class-”pre-scrollable”"><a href="#lt-pre-class-”pre-scrollable”" class="headerlink" title="&lt; pre class=”pre-scrollable”"></a>&lt; pre class=”pre-scrollable”</h5><h5 id="table-表格-table-bordered-table-striped隔行换色-table-hover"><a href="#table-表格-table-bordered-table-striped隔行换色-table-hover" class="headerlink" title="table 表格 table-bordered table-striped隔行换色 table-hover"></a>table 表格 table-bordered table-striped隔行换色 table-hover</h5><h5 id="table-responsive响应式表格"><a href="#table-responsive响应式表格" class="headerlink" title="table-responsive响应式表格"></a>table-responsive响应式表格</h5><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><h5 id="form-group-gt-form-control-control-lable"><a href="#form-group-gt-form-control-control-lable" class="headerlink" title="form-group &gt; form-control control-lable"></a>form-group &gt; form-control control-lable</h5><h5 id="form-inline-sr-only隐藏"><a href="#form-inline-sr-only隐藏" class="headerlink" title="form-inline sr-only隐藏"></a>form-inline sr-only隐藏</h5><h5 id="输入框组input-group-gt-input-group-addon-文字-单选-复选框-input-group-lg-sm尺寸-input-group-btn按钮-btn-btn-default-btn-success"><a href="#输入框组input-group-gt-input-group-addon-文字-单选-复选框-input-group-lg-sm尺寸-input-group-btn按钮-btn-btn-default-btn-success" class="headerlink" title="输入框组input-group &gt; input-group-addon 文字/单选/复选框 input-group-lg/sm尺寸  input-group-btn按钮 btn btn-default btn-success"></a>输入框组input-group &gt; input-group-addon 文字/单选/复选框 input-group-lg/sm尺寸  input-group-btn按钮 btn btn-default btn-success</h5><h5 id="结合栅格-form-horizontal-gt-col-sm-2"><a href="#结合栅格-form-horizontal-gt-col-sm-2" class="headerlink" title="结合栅格 form-horizontal &gt; col-sm-2"></a>结合栅格 form-horizontal &gt; col-sm-2</h5><h5 id="radio-checkbox"><a href="#radio-checkbox" class="headerlink" title="radio checkbox"></a>radio checkbox</h5><h5 id="禁用disable-只读readonly"><a href="#禁用disable-只读readonly" class="headerlink" title="禁用disable 只读readonly"></a>禁用disable 只读readonly</h5><h3 id="状态校验"><a href="#状态校验" class="headerlink" title="状态校验"></a>状态校验</h3><h5 id="has-success-has-error"><a href="#has-success-has-error" class="headerlink" title="has-success has-error"></a>has-success has-error</h5><h5 id="has-feedback-lt-span-class-”glyphicon-glyphicon-ok-form-control-feedback”-gt"><a href="#has-feedback-lt-span-class-”glyphicon-glyphicon-ok-form-control-feedback”-gt" class="headerlink" title="has-feedback &lt; span class=”glyphicon glyphicon-ok form-control-feedback”&gt;"></a>has-feedback &lt; span class=”glyphicon glyphicon-ok form-control-feedback”&gt;</h5><h5 id="input-sm"><a href="#input-sm" class="headerlink" title="input-sm"></a>input-sm</h5>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2039,7 +2057,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2070,7 +2088,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2087,7 +2107,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
