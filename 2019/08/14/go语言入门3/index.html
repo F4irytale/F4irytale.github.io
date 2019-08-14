@@ -125,25 +125,25 @@
     enable_page_level_ads: true
   });
 </script>
-  <meta name="description" content="目录12345goPATH&amp;#123;    bin    pkg    src&amp;#125; 运行123run main.gogo buildgo install HelloWorld1234567package mainimport &amp;quot;fmt&amp;quot;func main()  &amp;#123;	//单行注释	fmt.Println(&amp;quot;Hello World&amp;quot;)	&amp;#1">
+  <meta name="description" content="切片切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。1var name[]T 制造切片(与Python相同)12345b := [1:4]//再次切片c := [0:len(b)]//make制造切片d := make([]int,长度,容量)">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="go语言入门1">
-<meta property="og:url" content="http://yoursite.com/2019/08/11/go语言入门1/index.html">
+<meta property="og:title" content="go语言入门3">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/go语言入门3/index.html">
 <meta property="og:site_name" content="Fairytale的知识屋">
-<meta property="og:description" content="目录12345goPATH&amp;#123;    bin    pkg    src&amp;#125; 运行123run main.gogo buildgo install HelloWorld1234567package mainimport &amp;quot;fmt&amp;quot;func main()  &amp;#123;	//单行注释	fmt.Println(&amp;quot;Hello World&amp;quot;)	&amp;#1">
+<meta property="og:description" content="切片切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。1var name[]T 制造切片(与Python相同)12345b := [1:4]//再次切片c := [0:len(b)]//make制造切片d := make([]int,长度,容量)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-11T02:19:37.671Z">
+<meta property="og:updated_time" content="2019-08-14T15:51:37.761Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="go语言入门1">
-<meta name="twitter:description" content="目录12345goPATH&amp;#123;    bin    pkg    src&amp;#125; 运行123run main.gogo buildgo install HelloWorld1234567package mainimport &amp;quot;fmt&amp;quot;func main()  &amp;#123;	//单行注释	fmt.Println(&amp;quot;Hello World&amp;quot;)	&amp;#1">
+<meta name="twitter:title" content="go语言入门3">
+<meta name="twitter:description" content="切片切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。1var name[]T 制造切片(与Python相同)12345b := [1:4]//再次切片c := [0:len(b)]//make制造切片d := make([]int,长度,容量)">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/11/go语言入门1/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/14/go语言入门3/">
 
 
 
@@ -153,7 +153,7 @@
   };
 </script>
 
-  <title>go语言入门1 | Fairytale的知识屋</title>
+  <title>go语言入门3 | Fairytale的知识屋</title>
   
 
 
@@ -370,7 +370,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/11/go语言入门1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/go语言入门3/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fairytale">
@@ -387,7 +387,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">go语言入门1
+          <h1 class="post-title" itemprop="name headline">go语言入门3
               
             
           </h1>
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-08-11 10:18:02 / 修改时间：10:19:37" itemprop="dateCreated datePublished" datetime="2019-08-11T10:18:02+08:00">2019-08-11</time>
+              <time title="创建时间：2019-08-14 23:46:45 / 修改时间：23:51:37" itemprop="dateCreated datePublished" datetime="2019-08-14T23:46:45+08:00">2019-08-14</time>
             
 
             
@@ -468,13 +468,15 @@
       
 
       
-        <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">goPATH&#123;</span><br><span class="line">    bin</span><br><span class="line">    pkg</span><br><span class="line">    src</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">run main.go</span><br><span class="line">go build</span><br><span class="line">go install</span><br></pre></td></tr></table></figure>
-<h3 id="HelloWorld"><a href="#HelloWorld" class="headerlink" title="HelloWorld"></a>HelloWorld</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line">func main()  &#123;</span><br><span class="line">	//单行注释</span><br><span class="line">	fmt.Println(&quot;Hello World&quot;)</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><h5 id="赋值写在函数体中"><a href="#赋值写在函数体中" class="headerlink" title="赋值写在函数体中"></a>赋值写在函数体中</h5><h5 id="格式化代码-go-fmt-main-go"><a href="#格式化代码-go-fmt-main-go" class="headerlink" title="格式化代码 go fmt main.go"></a>格式化代码 go fmt main.go</h5><h5 id="定义变量定义类型"><a href="#定义变量定义类型" class="headerlink" title="定义变量定义类型"></a>定义变量定义类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var 变量名 变量类型</span><br><span class="line">var 变量名 变量类型 = 表达式</span><br><span class="line">var (变量名 变量类型</span><br><span class="line">    变量名 变量类型)</span><br></pre></td></tr></table></figure>
-<h5 id="类型推倒（kotlin）"><a href="#类型推倒（kotlin）" class="headerlink" title="类型推倒（kotlin）"></a>类型推倒（kotlin）</h5><h5 id="短变量声明-在函数中"><a href="#短变量声明-在函数中" class="headerlink" title="短变量声明 := 在函数中"></a>短变量声明 := 在函数中</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a := 10</span><br></pre></td></tr></table></figure>
-<h5 id="函数外以关键字开头"><a href="#函数外以关键字开头" class="headerlink" title="函数外以关键字开头"></a>函数外以关键字开头</h5><h5 id="匿名变量"><a href="#匿名变量" class="headerlink" title="匿名变量 _"></a>匿名变量 _</h5><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const pi = 3.1415</span><br></pre></td></tr></table></figure>
-<h5 id="const声明后没有表达式，默认与上一行相同"><a href="#const声明后没有表达式，默认与上一行相同" class="headerlink" title="const声明后没有表达式，默认与上一行相同"></a>const声明后没有表达式，默认与上一行相同</h5><h5 id="lota-枚举-在const出现时为0，多一行加一4-跳过值"><a href="#lota-枚举-在const出现时为0，多一行加一4-跳过值" class="headerlink" title="lota 枚举 在const出现时为0，多一行加一4 _跳过值"></a>lota 枚举 在const出现时为0，多一行加一4 _跳过值</h5><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h5 id="算数-–"><a href="#算数-–" class="headerlink" title="算数 + - * / % ++ –"></a>算数 + - * / % ++ –</h5><h5 id="关系-lt-gt"><a href="#关系-lt-gt" class="headerlink" title="关系 == &lt;= &gt;="></a>关系 == &lt;= &gt;=</h5><h5 id="逻辑-amp-amp"><a href="#逻辑-amp-amp" class="headerlink" title="逻辑 &amp;&amp; || !"></a>逻辑 &amp;&amp; || !</h5><h5 id="位运算符-amp-lt-lt-gt-gt"><a href="#位运算符-amp-lt-lt-gt-gt" class="headerlink" title="位运算符 &amp; | ^ &lt;&lt; &gt;&gt;"></a>位运算符 &amp; | ^ &lt;&lt; &gt;&gt;</h5><h5 id="赋值运算"><a href="#赋值运算" class="headerlink" title="赋值运算 = +="></a>赋值运算 = +=</h5><h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><h5 id="if-else-if-else"><a href="#if-else-if-else" class="headerlink" title="if else if else"></a>if else if else</h5><h5 id="for-省略初始语句，保留分号-省略初始语句与结束语句"><a href="#for-省略初始语句，保留分号-省略初始语句与结束语句" class="headerlink" title="for 省略初始语句，保留分号 省略初始语句与结束语句"></a>for 省略初始语句，保留分号 省略初始语句与结束语句</h5><h5 id="break-continue-退出循环"><a href="#break-continue-退出循环" class="headerlink" title="break continue 退出循环"></a>break continue 退出循环</h5><h5 id="switch-case-default"><a href="#switch-case-default" class="headerlink" title="switch case: default"></a>switch case: default</h5>
+        <h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><h5 id="切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。"><a href="#切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。" class="headerlink" title="切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。"></a>切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var name[]T</span><br></pre></td></tr></table></figure>
+<h5 id="制造切片-与Python相同"><a href="#制造切片-与Python相同" class="headerlink" title="制造切片(与Python相同)"></a>制造切片(与Python相同)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">b := [1:4]</span><br><span class="line">//再次切片</span><br><span class="line">c := [0:len(b)]</span><br><span class="line">//make制造切片</span><br><span class="line">d := make([]int,长度,容量)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">len()长度</span><br><span class="line">cap()容量</span><br></pre></td></tr></table></figure>
+<h5 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a[]int==nil</span><br><span class="line">var b = []int&#123;&#125;!=nil</span><br><span class="line">c := make([]int,0)!=nil</span><br></pre></td></tr></table></figure>
+<h5 id="赋值拷贝-指向同一内存地址"><a href="#赋值拷贝-指向同一内存地址" class="headerlink" title="赋值拷贝 指向同一内存地址"></a>赋值拷贝 指向同一内存地址</h5><h5 id="遍历切片与数组相同"><a href="#遍历切片与数组相同" class="headerlink" title="遍历切片与数组相同"></a>遍历切片与数组相同</h5><h5 id="切片要初始化才能使用-切片为引用地址不需要取址符"><a href="#切片要初始化才能使用-切片为引用地址不需要取址符" class="headerlink" title="切片要初始化才能使用,切片为引用地址不需要取址符"></a>切片要初始化才能使用,切片为引用地址不需要取址符</h5><h5 id="切片扩容"><a href="#切片扩容" class="headerlink" title="切片扩容"></a>切片扩容</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = append(a,10)//自动扩容</span><br><span class="line">a = append(a, 1,2,3,4)</span><br><span class="line">//添加其他切片</span><br><span class="line">a = append(a,b...)</span><br></pre></td></tr></table></figure>
+<h5 id="切片的copy"><a href="#切片的copy" class="headerlink" title="切片的copy"></a>切片的copy</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy(b,a)//a拷贝到b中</span><br></pre></td></tr></table></figure>
+<h5 id="切片删除元素"><a href="#切片删除元素" class="headerlink" title="切片删除元素"></a>切片删除元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = append(a[:index],a[index+1:]...)</span><br></pre></td></tr></table></figure>
+<h5 id="sort包排序"><a href="#sort包排序" class="headerlink" title="sort包排序"></a>sort包排序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort.Ints(a[:])//a[:]是切片，指向底层的数组a</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -520,8 +522,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/10/Less快速入门3/" rel="next" title="Less快速入门3">
-                <i class="fa fa-chevron-left"></i> Less快速入门3
+              <a href="/2019/08/13/ajax入门1/" rel="next" title="ajax入门1">
+                <i class="fa fa-chevron-left"></i> ajax入门1
               </a>
             
           </div>
@@ -529,10 +531,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/11/ajax入门0/" rel="prev" title="ajax入门0">
-                ajax入门0 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -731,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">2.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HelloWorld"><span class="nav-number">3.</span> <span class="nav-text">HelloWorld</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">3.1.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#赋值写在函数体中"><span class="nav-number">3.1.1.</span> <span class="nav-text">赋值写在函数体中</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#格式化代码-go-fmt-main-go"><span class="nav-number">3.1.2.</span> <span class="nav-text">格式化代码 go fmt main.go</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#定义变量定义类型"><span class="nav-number">3.1.3.</span> <span class="nav-text">定义变量定义类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类型推倒（kotlin）"><span class="nav-number">3.1.4.</span> <span class="nav-text">类型推倒（kotlin）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#短变量声明-在函数中"><span class="nav-number">3.1.5.</span> <span class="nav-text">短变量声明 := 在函数中</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数外以关键字开头"><span class="nav-number">3.1.6.</span> <span class="nav-text">函数外以关键字开头</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#匿名变量"><span class="nav-number">3.1.7.</span> <span class="nav-text">匿名变量 _</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量"><span class="nav-number">4.</span> <span class="nav-text">常量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#const声明后没有表达式，默认与上一行相同"><span class="nav-number">4.0.1.</span> <span class="nav-text">const声明后没有表达式，默认与上一行相同</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#lota-枚举-在const出现时为0，多一行加一4-跳过值"><span class="nav-number">4.0.2.</span> <span class="nav-text">lota 枚举 在const出现时为0，多一行加一4 _跳过值</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符"><span class="nav-number">5.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#算数-–"><span class="nav-number">5.0.1.</span> <span class="nav-text">算数 + - * / % ++ –</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关系-lt-gt"><span class="nav-number">5.0.2.</span> <span class="nav-text">关系 == &lt;= &gt;=</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逻辑-amp-amp"><span class="nav-number">5.0.3.</span> <span class="nav-text">逻辑 &amp;&amp; || !</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#位运算符-amp-lt-lt-gt-gt"><span class="nav-number">5.0.4.</span> <span class="nav-text">位运算符 &amp; | ^ &lt;&lt; &gt;&gt;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#赋值运算"><span class="nav-number">5.0.5.</span> <span class="nav-text">赋值运算 = +=</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程控制"><span class="nav-number">6.</span> <span class="nav-text">流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#if-else-if-else"><span class="nav-number">6.0.1.</span> <span class="nav-text">if else if else</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#for-省略初始语句，保留分号-省略初始语句与结束语句"><span class="nav-number">6.0.2.</span> <span class="nav-text">for 省略初始语句，保留分号 省略初始语句与结束语句</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#break-continue-退出循环"><span class="nav-number">6.0.3.</span> <span class="nav-text">break continue 退出循环</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#switch-case-default"><span class="nav-number">6.0.4.</span> <span class="nav-text">switch case: default</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#切片"><span class="nav-number">1.</span> <span class="nav-text">切片</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。"><span class="nav-number">1.0.1.</span> <span class="nav-text">切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#制造切片-与Python相同"><span class="nav-number">1.0.2.</span> <span class="nav-text">制造切片(与Python相同)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#nil"><span class="nav-number">1.0.3.</span> <span class="nav-text">nil</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#赋值拷贝-指向同一内存地址"><span class="nav-number">1.0.4.</span> <span class="nav-text">赋值拷贝 指向同一内存地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#遍历切片与数组相同"><span class="nav-number">1.0.5.</span> <span class="nav-text">遍历切片与数组相同</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切片要初始化才能使用-切片为引用地址不需要取址符"><span class="nav-number">1.0.6.</span> <span class="nav-text">切片要初始化才能使用,切片为引用地址不需要取址符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切片扩容"><span class="nav-number">1.0.7.</span> <span class="nav-text">切片扩容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切片的copy"><span class="nav-number">1.0.8.</span> <span class="nav-text">切片的copy</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切片删除元素"><span class="nav-number">1.0.9.</span> <span class="nav-text">切片删除元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sort包排序"><span class="nav-number">1.0.10.</span> <span class="nav-text">sort包排序</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -921,7 +919,7 @@
   
     <script type="text/javascript">
       window.livereOptions = {
-        refer: '2019/08/11/go语言入门1/'
+        refer: '2019/08/14/go语言入门3/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
