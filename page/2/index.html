@@ -366,6 +366,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/09/Less快速入门2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/09/Less快速入门2/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">Less快速入门2</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-09 11:52:27 / 修改时间：11:54:05" itemprop="dateCreated datePublished" datetime="2019-08-09T11:52:27+08:00">2019-08-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/less/" itemprop="url" rel="index"><span itemprop="name">less</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Mixin混合"><a href="#Mixin混合" class="headerlink" title="Mixin混合"></a>Mixin混合</h3><h5 id="引用类选择器（另一个class-id）"><a href="#引用类选择器（另一个class-id）" class="headerlink" title="引用类选择器（另一个class/id）"></a>引用类选择器（另一个class/id）</h5><h4 id="带参数混合"><a href="#带参数混合" class="headerlink" title="带参数混合"></a>带参数混合</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.class&#123;@color&#125;&#123;</span><br><span class="line">    color:@color;</span><br><span class="line">&#125;</span><br><span class="line">#id&#123;</span><br><span class="line">    .class(red);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="多个参数-name-name"><a href="#多个参数-name-name" class="headerlink" title="多个参数(@name,@name)"></a>多个参数(@name,@name)</h5><h5 id="设置默认值-name-value"><a href="#设置默认值-name-value" class="headerlink" title="设置默认值(@name:value)"></a>设置默认值(@name:value)</h5><h3 id="导引表达式"><a href="#导引表达式" class="headerlink" title="导引表达式"></a>导引表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.classs(@font-size) when(2font-size&lt;20)&#123;</span><br><span class="line">    font-size:unit(@font-size,px);</span><br><span class="line">&#125;</span><br><span class="line">.classs(@font-size) when(2font-size&gt;=20)&#123;</span><br><span class="line">    font-size:30px;</span><br><span class="line">&#125;</span><br><span class="line">.classs(@font-size)//总是匹配&#123;</span><br><span class="line">background-color:#ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@num1:20;</span><br><span class="line">@num2:@num1+10;</span><br><span class="line">@num3=@num1+@num2;</span><br><span class="line">@num4=(@num1+3)*2;</span><br><span class="line">@color:#666/2;</span><br><span class="line"></span><br><span class="line">border:unit(@num1/2,px)</span><br></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h5 id="单位函数unit-unit-5-px-增加-unit-5px-消去"><a href="#单位函数unit-unit-5-px-增加-unit-5px-消去" class="headerlink" title="单位函数unit unit(5,px)增加 unit(5px)消去"></a>单位函数unit unit(5,px)增加 unit(5px)消去</h5><h5 id="单位转换convert-单位类型一致，等值转换-convert-14mm-px"><a href="#单位转换convert-单位类型一致，等值转换-convert-14mm-px" class="headerlink" title="单位转换convert,单位类型一致，等值转换 convert(14mm,px)"></a>单位转换convert,单位类型一致，等值转换 convert(14mm,px)</h5><h5 id="颜色值转换-color-“blue”"><a href="#颜色值转换-color-“blue”" class="headerlink" title="颜色值转换 color(“blue”)"></a>颜色值转换 color(“blue”)</h5><h5 id="darken-color-10-、lighten-、mix-color-color-可选混合度"><a href="#darken-color-10-、lighten-、mix-color-color-可选混合度" class="headerlink" title="darken(color,10%)、lighten()、mix(color,color,可选混合度)"></a>darken(color,10%)、lighten()、mix(color,color,可选混合度)</h5>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/Less快速入门1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1855,198 +2020,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/SQL笔记Part-4/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/15/SQL笔记Part-4/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">SQL笔记Part.4</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-15 21:02:28 / 修改时间：21:05:39" itemprop="dateCreated datePublished" datetime="2019-07-15T21:02:28+08:00">2019-07-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="SQL的语法"><a href="#SQL的语法" class="headerlink" title="SQL的语法"></a>SQL的语法</h3><h6 id="本文为《SQL-必知必会》的学习笔记"><a href="#本文为《SQL-必知必会》的学习笔记" class="headerlink" title="本文为《SQL 必知必会》的学习笔记"></a>本文为《SQL 必知必会》的学习笔记</h6><blockquote>
-<p>第四章 过滤数据</p>
-</blockquote>
-<ol>
-<li><p>使用WHERE子句进行条件过滤,WHERE子句在FROM子句之后给出，例句中只返回prod_price值为3.49的行</p>
-<ul>
-<li>[1] 数据库中浮点数后0个数对于结果不受影响</li>
-<li>[2] 尽量不要在应用层过滤数据，会造成不必要的浪费</li>
-<li>[3] 同时使用ORDER BY和WHERE子句时，ORDER BY在WHERE子句之后<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price = 3.49;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>WHERE子句操作符</p>
-<ul>
-<li>[1] 有些语句为冗余语句，需要确定DBMS支持哪些操作符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">= 等于                  &gt; 大于</span><br><span class="line">&lt;&gt; 不等于               &gt;= 大于等于</span><br><span class="line">!= 不等于               !&gt; 不大于</span><br><span class="line">&lt; 小于                  BETWEEN 在指定两个值之间</span><br><span class="line">&lt;= 小于等于             IS NULL 为NULL值</span><br><span class="line">!&lt; 不小于</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>检查单个值，不匹配检查，范围值检查，空值检查</p>
-<ul>
-<li>[1] 如果需要将值与字符串进行比较，需要使用引号进行限定</li>
-<li>[2] NULL(无值) 与0，空字符串，仅仅包含空格不同</li>
-<li>[3] NULL与非匹配不同<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price &lt;= 10;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_id &lt;&gt; &apos;DLL01&apos;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price BETWEEN 5 AND 10;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,prod_price</span><br><span class="line">FROM Products</span><br><span class="line">WHERE prod_price IS NULL;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2094,7 +2067,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2127,7 +2100,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
