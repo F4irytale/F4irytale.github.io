@@ -366,6 +366,188 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/17/Angular-js入门2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/17/Angular-js入门2/" class="post-title-link" itemprop="http://yoursite.com/index.html">Angular.js入门2</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-17 15:39:57" itemprop="dateCreated datePublished" datetime="2019-08-17T15:39:57+08:00">2019-08-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-18 15:40:36" itemprop="dateModified" datetime="2019-08-18T15:40:36+08:00">2019-08-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/angular-js/" itemprop="url" rel="index"><span itemprop="name">angular.js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="帕斯卡式命名：首字母大写，以Controller结尾"><a href="#帕斯卡式命名：首字母大写，以Controller结尾" class="headerlink" title="帕斯卡式命名：首字母大写，以Controller结尾"></a>帕斯卡式命名：首字母大写，以Controller结尾</h5><h5 id="独立作用域不互相影响，子控制器可以访问父控制器作用域对象"><a href="#独立作用域不互相影响，子控制器可以访问父控制器作用域对象" class="headerlink" title="独立作用域不互相影响，子控制器可以访问父控制器作用域对象"></a>独立作用域不互相影响，子控制器可以访问父控制器作用域对象</h5><h5 id="访问父控制器作用域对象"><a href="#访问父控制器作用域对象" class="headerlink" title="访问父控制器作用域对象"></a>访问父控制器作用域对象</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$parent.name</span><br></pre></td></tr></table></figure>
+<h5 id="链式写法-app-c-c"><a href="#链式写法-app-c-c" class="headerlink" title="链式写法 app.c.c"></a>链式写法 app.c.c</h5><h5 id="AngularJS包含jqLite"><a href="#AngularJS包含jqLite" class="headerlink" title="AngularJS包含jqLite"></a>AngularJS包含jqLite</h5><h3 id="rootscope全局"><a href="#rootscope全局" class="headerlink" title="rootscope全局"></a>rootscope全局</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.run([&apos;$rootscope&apos;,function($rootscope)&#123;</span><br><span class="line">    $rootscope.name=&quot;tom&quot;;</span><br><span class="line">&#125;])</span><br></pre></td></tr></table></figure>
+<h5 id="run方法用于初始化全局数据"><a href="#run方法用于初始化全局数据" class="headerlink" title="run方法用于初始化全局数据"></a>run方法用于初始化全局数据</h5><h5 id="访问根作用域"><a href="#访问根作用域" class="headerlink" title="访问根作用域"></a>访问根作用域</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$root.name</span><br></pre></td></tr></table></figure>
+<h5 id="根作用域定义方法"><a href="#根作用域定义方法" class="headerlink" title="根作用域定义方法"></a>根作用域定义方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-bind=&quot;function()&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="按钮事件"><a href="#按钮事件" class="headerlink" title="按钮事件"></a>按钮事件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-click= &quot;function()&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="调用父方法"><a href="#调用父方法" class="headerlink" title="调用父方法"></a>调用父方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$parent.function()</span><br></pre></td></tr></table></figure>
+<h5 id="方法逐层向上查找，直到rootscope-root-访问根-parent-访问父作用域"><a href="#方法逐层向上查找，直到rootscope-root-访问根-parent-访问父作用域" class="headerlink" title="方法逐层向上查找，直到rootscope $root 访问根 $parent 访问父作用域"></a>方法逐层向上查找，直到rootscope $root 访问根 $parent 访问父作用域</h5><h3 id="事件参数"><a href="#事件参数" class="headerlink" title="事件参数"></a>事件参数</h3><h5 id="在作用域中-this-表示-scope，不再表示事件源"><a href="#在作用域中-this-表示-scope，不再表示事件源" class="headerlink" title="在作用域中 this 表示$scope，不再表示事件源"></a>在作用域中 this 表示$scope，不再表示事件源</h5><h5 id="事件对象-event-事件源e-target"><a href="#事件对象-event-事件源e-target" class="headerlink" title="事件对象$event 事件源e.target"></a>事件对象$event 事件源e.target</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//DMO对象</span><br><span class="line">e.target.innerHTML</span><br><span class="line">//不能使用原生jquery</span><br><span class="line">//AngularJS进行转换</span><br><span class="line">angular.element(e.target).html()</span><br></pre></td></tr></table></figure>
+<h5 id="使用jquery需要单独引入库"><a href="#使用jquery需要单独引入库" class="headerlink" title="使用jquery需要单独引入库"></a>使用jquery需要单独引入库</h5><h5 id="绑定模型-取数据"><a href="#绑定模型-取数据" class="headerlink" title="绑定模型,取数据"></a>绑定模型,取数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-model=&quot;&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="按钮不能进行模型绑定"><a href="#按钮不能进行模型绑定" class="headerlink" title="按钮不能进行模型绑定"></a>按钮不能进行模型绑定</h5>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/angular-js入门1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1872,172 +2054,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/Less快速入门3/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/10/Less快速入门3/" class="post-title-link" itemprop="http://yoursite.com/index.html">Less快速入门3</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-10 10:48:20 / 修改时间：10:48:53" itemprop="dateCreated datePublished" datetime="2019-08-10T10:48:20+08:00">2019-08-10</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/less/" itemprop="url" rel="index"><span itemprop="name">less</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h5 id="data-uri-统一资源标识符，不超过32k"><a href="#data-uri-统一资源标识符，不超过32k" class="headerlink" title="data-uri()统一资源标识符，不超过32k"></a>data-uri()统一资源标识符，不超过32k</h5><h5 id="when-default-自定义的默认值"><a href="#when-default-自定义的默认值" class="headerlink" title="when(default()){}自定义的默认值"></a>when(default()){}自定义的默认值</h5><h5 id="取反not"><a href="#取反not" class="headerlink" title="取反not()"></a>取反not()</h5><h5 id="替换replace-‘string’-’old’-’new’-g-全局替换-replace-‘string’-’正则reg’-’-1’-g-1占位符，第一个匹配的值"><a href="#替换replace-‘string’-’old’-’new’-g-全局替换-replace-‘string’-’正则reg’-’-1’-g-1占位符，第一个匹配的值" class="headerlink" title="替换replace(‘string’,’old’,’new’,g)全局替换 replace(‘string’,’正则reg’,’$1’,g) $1占位符，第一个匹配的值"></a>替换replace(‘string’,’old’,’new’,g)全局替换 replace(‘string’,’正则reg’,’$1’,g) $1占位符，第一个匹配的值</h5><h5 id="长度length-获取值的数量，空格逗号分隔，返回个数"><a href="#长度length-获取值的数量，空格逗号分隔，返回个数" class="headerlink" title="长度length()获取值的数量，空格逗号分隔，返回个数"></a>长度length()获取值的数量，空格逗号分隔，返回个数</h5><h5 id="提取函数取值extract-name-3"><a href="#提取函数取值extract-name-3" class="headerlink" title="提取函数取值extract(@name,3)"></a>提取函数取值extract(@name,3)</h5><h3 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ceil向上取整</span><br><span class="line">round四舍五入</span><br><span class="line">percentage转换百分比</span><br><span class="line">mod余数</span><br></pre></td></tr></table></figure>
-<h3 id="嵌套规则"><a href="#嵌套规则" class="headerlink" title="嵌套规则"></a>嵌套规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#id&#123;</span><br><span class="line">    .name&#123;&#125;</span><br><span class="line">    .name&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="继承-extend"><a href="#继承-extend" class="headerlink" title="继承:extend"></a>继承:extend</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.class&#123;</span><br><span class="line">    &amp;:extend(.class)</span><br><span class="line">&#125;</span><br><span class="line">.class:extend(.class)&#123;&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="继承多个逗号隔开"><a href="#继承多个逗号隔开" class="headerlink" title="继承多个逗号隔开"></a>继承多个逗号隔开</h5><h5 id="extend-class-all-只要包含class的选择器都继承"><a href="#extend-class-all-只要包含class的选择器都继承" class="headerlink" title=":extend(.class all)只要包含class的选择器都继承"></a>:extend(.class all)只要包含class的选择器都继承</h5><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;name.less&quot;</span><br><span class="line">@import &quot;name.css&quot;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2085,7 +2101,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
