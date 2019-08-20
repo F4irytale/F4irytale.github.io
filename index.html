@@ -366,6 +366,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/Angular-js入门4/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fairytale">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fairytale的知识屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/20/Angular-js入门4/" class="post-title-link" itemprop="http://yoursite.com/index.html">Angular.js入门4</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 23:21:47 / 修改时间：23:23:10" itemprop="dateCreated datePublished" datetime="2019-08-20T23:21:47+08:00">2019-08-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/angular-js/" itemprop="url" rel="index"><span itemprop="name">angular.js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h6 id="首先祝贺第一篇写到4的笔记"><a href="#首先祝贺第一篇写到4的笔记" class="headerlink" title="首先祝贺第一篇写到4的笔记"></a>首先祝贺第一篇写到4的笔记</h6><h5 id="limitTo"><a href="#limitTo" class="headerlink" title="limitTo"></a>limitTo</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&quot;Hello World&quot;|limitTo:2&#125;&#125;</span><br><span class="line">&#123;&#123;&quot;Hello World&quot;|limitTo:-2&#125;&#125;//从后向前</span><br><span class="line">&#123;&#123;&quot;Hello World&quot;|limitTo:2:6&#125;&#125;//从索引为6开始截取2个</span><br></pre></td></tr></table></figure>
+<h5 id="json过滤器"><a href="#json过滤器" class="headerlink" title="json过滤器"></a>json过滤器</h5><h5 id="将对象转化为json"><a href="#将对象转化为json" class="headerlink" title="将对象转化为json"></a>将对象转化为json</h5><h5 id="filter过滤器-筛选数组"><a href="#filter过滤器-筛选数组" class="headerlink" title="filter过滤器 筛选数组"></a>filter过滤器 筛选数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;arr | filter:&apos;a&apos;&#125;&#125;//包含a，不区分大小写</span><br><span class="line">&#123;&#123;arr | filter:&apos;!a&apos;&#125;&#125;//不包含</span><br><span class="line">&#123;&#123;arr | filter:&apos;a&apos;:true&#125;&#125;//完全匹配</span><br><span class="line">&#123;&#123;users | filter:&#123;name:&apos;a&apos;&#125;&#125;&#125;</span><br><span class="line">&#123;&#123;users | filter:&#123;name:&apos;a&apos;,age:22&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="定义规则返回true"><a href="#定义规则返回true" class="headerlink" title="定义规则返回true"></a>定义规则返回true</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;arr | filter:comp&#125;&#125;</span><br><span class="line">$scope.comp=function(value,index,arr)&#123;</span><br><span class="line">    if(value.length==4);</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="orderBy过滤器-排序"><a href="#orderBy过滤器-排序" class="headerlink" title="orderBy过滤器 排序"></a>orderBy过滤器 排序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;users | orderBy:&apos;name&apos;&#125;&#125;</span><br><span class="line">&#123;&#123;users | orderBy:&apos;-age&apos;&#125;&#125;//降序</span><br><span class="line">&#123;&#123;users | orderBy:&apos;age&apos;:true&#125;&#125;//降序</span><br><span class="line">&#123;&#123;users | orderBy:function&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="比较返回正数升序排列，否则降序"><a href="#比较返回正数升序排列，否则降序" class="headerlink" title="比较返回正数升序排列，否则降序"></a>比较返回正数升序排列，否则降序</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.localeCompare()比较字符串大小</span><br></pre></td></tr></table></figure>
+<h5 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//与控制器同级,返回值即为过滤结果</span><br><span class="line">app.filter(&apos;name&apos;,function()&#123;</span><br><span class="line">    return function(data)&#123;</span><br><span class="line">       return  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h5 id="属性指令"><a href="#属性指令" class="headerlink" title="属性指令"></a>属性指令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ng-href</span><br><span class="line">ng-readonly</span><br><span class="line">ng-src</span><br><span class="line">ng-class//class=&apos;&apos;</span><br><span class="line">ng-style//json</span><br></pre></td></tr></table></figure>
+<h5 id="功能指令"><a href="#功能指令" class="headerlink" title="功能指令"></a>功能指令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ng-if</span><br><span class="line">ng-show</span><br><span class="line"></span><br><span class="line">ng-switch</span><br><span class="line">ng-switch-when</span><br><span class="line">ng-switch-default</span><br><span class="line"></span><br><span class="line">ng-init=&quot;name=&apos;&apos;&quot;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+  
+     </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/18/Angular-js入门3/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1882,177 +2052,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/11/ajax入门0/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fairytale">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fairytale的知识屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/11/ajax入门0/" class="post-title-link" itemprop="http://yoursite.com/index.html">ajax入门0</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-11 10:18:55 / 修改时间：10:20:35" itemprop="dateCreated datePublished" datetime="2019-08-11T10:18:55+08:00">2019-08-11</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ajax/" itemprop="url" rel="index"><span itemprop="name">ajax</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="同步-异步"><a href="#同步-异步" class="headerlink" title="同步/异步"></a>同步/异步</h5><h5 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var request = new XMLHttpRequest()</span><br></pre></td></tr></table></figure>
-<h5 id="GET-使用URL传参-幂等-多次请求相同"><a href="#GET-使用URL传参-幂等-多次请求相同" class="headerlink" title="GET 使用URL传参 幂等 多次请求相同"></a>GET 使用URL传参 幂等 多次请求相同</h5><h5 id="POST-修改资源"><a href="#POST-修改资源" class="headerlink" title="POST 修改资源"></a>POST 修改资源</h5><h5 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h5><ul>
-<li>状态码</li>
-<li>响应头</li>
-<li>响应体<h5 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 正在处理</span><br><span class="line">2 成功</span><br><span class="line">3 重定向</span><br><span class="line">4 客户端错误</span><br><span class="line">5 服务器错误</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="open-method-url-async-async-true-false-同步异步-method-”GET”-“post”"><a href="#open-method-url-async-async-true-false-同步异步-method-”GET”-“post”" class="headerlink" title="open(method,url,async) async=true/false 同步异步 method=”GET”/“post”"></a>open(method,url,async) async=true/false 同步异步 method=”GET”/“post”</h5><h5 id="send-string"><a href="#send-string" class="headerlink" title="send(string)"></a>send(string)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">responseText：获得字符串形式的响应数据。</span><br><span class="line"></span><br><span class="line">responseXML:获得XML形式的响应数据。</span><br><span class="line"></span><br><span class="line">status和statusText：获取服务器以数字和文本形式返回HTTP状态码。</span><br><span class="line"></span><br><span class="line">getAllResponseHeader():获取所有的响应报头。</span><br><span class="line"></span><br><span class="line">getResourceHeader（）：查询响应中的某个字段的值，需要传参。</span><br></pre></td></tr></table></figure>
-<h5 id="readyState属性"><a href="#readyState属性" class="headerlink" title="readyState属性"></a>readyState属性</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0 请求未初始化</span><br><span class="line">1 服务器连接建立</span><br><span class="line">2 请求已接收</span><br><span class="line">3 请求处理中</span><br><span class="line">4 请求已完成</span><br></pre></td></tr></table></figure>
-<h5 id="request-onreadystatechange-4-amp-amp-request-statys-200"><a href="#request-onreadystatechange-4-amp-amp-request-statys-200" class="headerlink" title="request.onreadystatechange== =4&amp;&amp;request.statys===200"></a>request.onreadystatechange== =4&amp;&amp;request.statys===200</h5><h3 id="php"><a href="#php" class="headerlink" title="php"></a>php</h3><h5 id="服务端脚本语言"><a href="#服务端脚本语言" class="headerlink" title="服务端脚本语言"></a>服务端脚本语言</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?</span><br><span class="line">echo &quot;&quot;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-  
-     </div>
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2100,7 +2099,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
